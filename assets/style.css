@@ -73,6 +73,11 @@ article{
     grid-template-rows: repeat(1,1fr);
 }
 
+article img{
+    background-color:lightblue;
+    border-radius:50%;
+}
+
 article > div:first-child{
     display: flex;
     align-items: center;
