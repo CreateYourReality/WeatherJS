@@ -73,7 +73,7 @@ article{
     grid-template-rows: repeat(1,1fr);
 }
 
-article img{
+article div img{
     background-color:lightblue;
     border-radius:50%;
 }
