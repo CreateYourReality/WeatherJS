@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>WEATHER API</title>
+</head>
+<body>
+    <main>
+        <section>
+            <label for="">CURRENT WEATHER</label>
+            <article>
+                <div>
+                    <h2 id="locationTime"></h2>
+                    <h3 id="coords"></h3>
+                    <h1 id="locationName"></h1>
+                    <h3 id="tempC"></h3>
+                    <h3 id="humidity"></h3>
+                    <h3 id="pressure"></h3>
+                </div>
+                <div>
+                    
+                    <img id="weatherIcon" src="" alt="actual weather">
+                    <h4 id="sky"></h4>
+                </div>
+                    <p id="lastUpdate">LAST UPDATE</p>
+            </article>
+            <label for="">Extra Data</label>
+            <article>
+                <h4 id="sunrise"></h4>
+                <h4 id="windSpeed"></h4>
+                <h4 id="sunset"></h4>
+                <h4 id="windDirection"></h4>
+            </article>
+        </section>
+
+       
+        <form>
+            <input id="searchLocation" type="text">
+            <input id="searchBtn" type="button" value="SEARCH">
+        </form>
+    </main>
+<!-- <script type="text/javascript" src="./assets/main.js"></script> -->
+<script type="text/javascript" src="./assets/openweather.js"></script>
+</body>
+</html>
