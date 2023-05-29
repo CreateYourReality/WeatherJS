@@ -7,20 +7,28 @@
 :root{
     --white: #fff;
     --black: #000;
-    --lightGreen: lightgreen;
+    --lightOrange: #E6BBAD;
     --red: crimson;
     --purple: purple;
     --plum: plum;
-    --lightBlue: lightblue;
+    --lightBlue: #add8e6;
     --lightRed: lightsalmon;
-
     --blue:blue;
     --green:green;
+    --transpWhite: #ffffff68;
 }
 
 html{
     font-size: 62.5%;
     font-family: Helvetica,Arial,sans-serif;
+}
+
+p{
+    text-align: center;
+}
+
+h4{
+    margin-bottom: 5px;
 }
 
 main{
@@ -37,17 +45,20 @@ section{
     border-left: 1px groove var(--black);
     border-right: 1px groove var(--black);
     border-top: 1px groove var(--black);
-    width: 30%;
-    height: 32%;
+    min-height: 380px;
     min-width: 350px;
+    max-width: 350px;
+    overflow: hidden;
+
 }
 
 input[type="button"]{
     margin: 10px;
     border:none;
-    padding: 5px;
+    padding: 8px;
     background-color: var(--purple);
     color: var(--white);
+    border-radius: 5px;
 }
 
 input[type="button"]:hover{
@@ -58,7 +69,7 @@ input[type="text"]{
     border-radius: 5px;
     border:1px solid var(--black);
     padding: 1px;
-    width: 250px;
+    width: 230px;
     height: 30px;
     border-radius: 8px;
     margin-top: 15px;
@@ -68,22 +79,34 @@ input[type="text"]{
 article{
     padding: 0 10px;
     text-align: center;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(1,1fr);
+    position: relative;
 }
 
-article > div:first-child{
+article img{
+    position: absolute;
+    top:-100px;
+    z-index: 0;
+    left: 48px;
+    background: linear-gradient(to bottom, var(--white), var(--lightBlue));
+    border-radius: 50%;
+    opacity: 75%;
+    padding: 75px;
+}
+
+article div:first-child{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    z-index: 1;
+    position: relative;
 }
 
 section article:last-child{
-    background-color: var(--white);
+    background-color: var(--transpWhite);
+    opacity: 90%;
     border-radius: 5px;
-    margin: 0 15px;
+    margin: 0 35px;
     padding: 5px;
 }
 
@@ -93,26 +116,28 @@ h1{
 }
 
 form{
-    height: 8%;
-    width: 30%;
+    min-height: 65px;
     min-width: 350px;
+    max-width: 350px;
     text-align: center;
-    background: linear-gradient(to top, var(--white),var(--lightGreen));
+    background: linear-gradient(to top, var(--white),var(--lightOrange));
     border-radius: 0 0 15px 15px;
     border-left: 1px groove var(--black);
     border-right: 1px groove var(--black);
     border-bottom: 1px groove var(--black);
+    padding: 0 10px 0 13px;
 }
 
 label{
     display: block;
-    margin: 8px 0;
+    margin: 18px 0 10px 0;
     font-size: clamp(1rem,1.2vw,2rem);
     text-align: center;
+    z-index: 1;
+    position: relative;
 }
 
 #lastUpdate{
-    grid-area: 2 / 1 / 3 / 3;
     margin: 10px 0;
     color: var(--lightRed);
     text-shadow: -1px 0 var(--black), 0 1px var(--black), 1px 0 var(--black), 0 -1px var(--black);
